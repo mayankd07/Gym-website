@@ -1,0 +1,207 @@
+
+<html>
+<head>
+	<title>FITNESS GYM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    
+  </style>
+  
+</head>
+
+<body
+<!-- Start Header  -->
+ <header>
+ 	 <div class="container">
+ 	 	<div class="logo">
+ 	 		 <a href=""> FITNESS <span> GYM </span></a>
+ 	 	</div>
+ 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	       <span></span>	
+ 	       <span></span>
+ 	 	</a>
+ 	 	<div class="nav">
+ 	 		<ul>
+ 	 			<li><a href="HOME.html">Home</a></li>
+ 	 			<li><a href="Packages.html">About</a></li>
+ 	 			<li><a href="Services.html">Services</a></li>
+ 	 			<li><a href="Classes.html">Classes</a></li>
+ 	 			<li><a href="Schedule.html">Schedule</a></li>
+ 	 			<li><a href="Packages.html">Packages</a></li>
+ 	 			<li><a href="HOME.html">Contact</a></li>
+ 	 		</ul>
+ 	 	</div>
+ 	 </div>
+ </header>
+ <!-- End Header  -->
+
+</section>
+	
+</head>
+
+	<section class="classes" id="classes">
+             <div class="container">
+            <div class="content">
+		<h2> OUR CLASSES </h2>
+
+             </div>
+
+            </div>
+
+                    </body>
+   
+		          <div class="content">
+			
+
+                         <div class="class-items"> 
+				
+			<div class="item wow bounceInUp">
+         
+                          <div class="item-text">
+                        
+                     	  <h4>Body Building Training</h4>
+                     	  <p>The unique program i have developed will help burn calories,boost metabolism and improve your overall health.
+                          a combination of strategic exercises and healthy diet will have you in a good shape.</p>
+                       
+                       </div>
+
+                              <div class="box img wow slideInRight">     
+                     	       <img src="images/c1.jpg" alt="clss2" />
+                          
+
+                                <a href="price.html">Get Details</a>
+                          
+                           </div>
+
+                         </div>
+
+                        </div>
+
+                       </div>
+
+             </section>
+
+	                          <section class="classes" id="classes">
+                                      <div class="container">
+                                     <div class="content">
+
+             </div>
+
+            </div>
+	
+                              </body>
+ 
+                            <div class="content">
+			   
+                            <div class="class-items"> 
+                            <div class="item wow bounceInUp">
+                            
+                     	
+                     <div class="item-text">
+                     	  <h4>Cardio Training</h4>
+                     	  <p>This is a popular trend in the fitness world today.
+                          whether its losing weight or trimming and toning.my program
+                          will improve your health and have you feeling great.
+                          you will see an improvement in your performance in no time.</p>
+                          
+                            </div>  
+                                   <div class="box img wow slideInRight">
+                          
+                                  <img src="images/cls.jpg" alt="clss2" />
+                                   
+                             
+
+                                      <a href="HOME.html"> Back To Home </a>
+                       
+                         
+                              </div>
+                  
+                           </div>
+                     
+
+ </section>
+
+
+
+ <section class="start-today">
+ 	<div class="container">
+ 		 <div class="content">
+ 		 	  <div class="box text wow slideInBottom">
+ 		 	  	 <h2>Start Your Training Today</h2>
+ 		 	  	 <p>Health and fitness is not only about what your body looks like on the outside but also on the inside.I will make sure your body and mind find the right balance.what are you waiting for? Book a session today. </p>
+ 		 	  	 <a href="price.html" class="btn">Start Now</a>
+ 		 	  </div>
+ 		 	  <div class="box img wow slideInRight">
+                          
+                          <img src="images/class2.jpg" alt="start today" />
+
+ 		 	  </div>
+
+ 		 </div>
+ 	</div>
+ </section>
+</body>
+<!-- jquery -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+      $(".ham-burger, .nav ul li a").click(function(){
+       
+        $(".nav").toggleClass("open")
+
+        $(".ham-burger").toggleClass("active");
+      })      
+      $(".accordian-container").click(function(){
+      	$(".accordian-container").children(".body").slideUp();
+      	$(".accordian-container").removeClass("active")
+      	$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+      	$(this).children(".body").slideDown();
+      	$(this).addClass("active")
+      	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+      })
+
+       $(".nav ul li a, .go-down").click(function(event){
+         if(this.hash !== ""){
+
+              event.preventDefault();
+
+              var hash=this.hash; 
+
+              $('html,body').animate({
+                scrollTop:$(hash).offset().top
+              },800 , function(){
+                 window.location.hash=hash;
+              });
+
+              // add active class in navigation
+              $(".nav ul li a").removeClass("active")
+              $(this).addClass("active")
+         }
+      })
+})
+
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       0,
+      }
+    );
+    wow.init();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

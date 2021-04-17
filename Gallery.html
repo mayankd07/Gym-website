@@ -1,0 +1,167 @@
+ <!-- Start Header  -->
+ <header>
+ 	 <div class="container">
+ 	 	<div class="logo">
+ 	 		 <a href="">FITNESS <span> GYM </span></a>
+ 	 	</div>
+ 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	       <span></span>	
+ 	       <span></span>
+ 	 	</a>
+ 	 	<div class="nav">
+ 	 		<ul>
+ 	 			<li><a href="HOME.html">Home</a></li>
+ 	 			<li><a href="Gallery.html">Gallery</a></li>
+ 	 			<li><a href="Services.html">Services</a></li>
+ 	 			<li><a href="Classes.html">Classes</a></li>
+ 	 			<li><a href="Schedule.html">Schedule</a></li>
+ 	 			<li><a href="Packages.html">Packages</a></li>
+ 	 			<li><a href="HOME.html">Contact</a></li>
+ 	 		</ul>
+ 	 	</div>
+ 	 </div>
+ </header>
+ <!-- End Header  -->
+<html>
+
+<head>
+	<title>FiTnEsS GyM workout gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+
+	</style>
+
+</head>
+
+<body>
+	<section class="gallery" id="gallery">
+		<h2>Workout Gallery</h2>
+		<div class="content">
+			<div class="box wow slideInLeft">
+				<img src="images/gallery1.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInRight">
+				<img src="images/gallery2.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInLeft">
+				<img src="images/gallery3.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInLeft">
+				<img src="images/gallery4.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInLeft">
+				<img src="images/gallery5.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInLeft">
+				<img src="images/gallery6.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInLeft">
+				<img src="images/gallery7.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInRight">
+				<img src="images/gallery8.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInRight">
+				<img src="images/gallery9.jpg" alt="gallery" />
+			</div>
+			<div class="box wow slideInLeft">
+				<img src="images/gallery10.jpg" alt="gallery" />
+			</div>
+                        <div class="box wow slideInLeft">
+				<img src="images/gallery17.jpg" alt="gallery" />
+			</div>
+                        <div class="box wow slideInLeft">
+				<img src="images/gallery18.jpg" alt="gallery" />
+			</div>
+                         <div class="box wow slideInRight">
+				<img src="images/gallery19.jpg" alt="gallery" />
+			</div>
+                        <div class="box wow slideInRight">
+				<img src="images/gallery20.jpg" alt="gallery" />
+			</div>
+		    <div class="box wow slideInRight">
+			<img src="images/gallery11.jpg" alt="gallery" />
+		</div>
+		<div class="box wow slideInLeft">
+			<img src="images/gallery12.jpg" alt="gallery" />
+		</div>
+		<div class="box wow slideInRight">
+			<img src="images/gallery13.jpg" alt="gallery" />
+		</div>
+		<div class="box wow slideInLeft">
+			<img src="images/gallery14.jpg" alt="gallery" />
+		</div>
+		<div class="box wow slideInRight">
+			<img src="images/gallery15.jpg" alt="gallery" />
+		</div>
+		<div class="box wow slideInLeft">
+			<img src="images/gallery16.jpg" alt="gallery" />
+		</div>
+		</div>
+	</section>
+
+</body>
+<a href="HOME.html"> BACK TO HOME </a>
+<!-- jquery -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+      $(".ham-burger, .nav ul li a").click(function(){
+       
+        $(".nav").toggleClass("open")
+
+        $(".ham-burger").toggleClass("active");
+      })      
+      $(".accordian-container").click(function(){
+      	$(".accordian-container").children(".body").slideUp();
+      	$(".accordian-container").removeClass("active")
+      	$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+      	$(this).children(".body").slideDown();
+      	$(this).addClass("active")
+      	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+      })
+
+       $(".nav ul li a, .go-down").click(function(event){
+         if(this.hash !== ""){
+
+              event.preventDefault();
+
+              var hash=this.hash; 
+
+              $('html,body').animate({
+                scrollTop:$(hash).offset().top
+              },800 , function(){
+                 window.location.hash=hash;
+              });
+
+              // add active class in navigation
+              $(".nav ul li a").removeClass("active")
+              $(this).addClass("active")
+         }
+      })
+})
+
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       0,
+      }
+    );
+    wow.init();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

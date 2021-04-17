@@ -1,0 +1,192 @@
+<html>
+<head>
+	<title>FiTnEsS GyM schdules </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+	 
+    
+  </style>
+<!-- Start Header  -->
+ <header>
+ 	 <div class="container">
+ 	 	<div class="logo">
+ 	 		 <a href="">FITNESS <span> GYM</span></a>
+ 	 	</div>
+ 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	       <span></span>	
+ 	       <span></span>
+ 	 	</a>
+ 	 	<div class="nav">
+ 	 		<ul>
+ 	 			<li><a href="HOME.html">Home</a></li>
+ 	 			<li><a href="Packages.html">About</a></li>
+								<li><a href="Gallery.html
+									">Gallery</a></li>
+ 	 			<li><a href="services.html">Services</a></li>
+ 	 			<li><a href="classes.html">Classes</a></li>
+ 	 			<li><a href="schedule.html">Schedule</a></li>
+ 	 			<li><a href="Packages.html">Packages</a></li>
+ 	 			<li><a href="HOME.html">Contact</a></li>
+ 	 		</ul>
+ 	 	</div>
+ 	 </div>
+ </header>
+ <!-- End Header  -->
+
+
+  
+</head>
+
+<body background="images/sbg3.jpg">
+	
+  <section class="schedule" id="schedule" >
+  	 <div class="container">
+  	 	  <div class="content" >
+  	 	  	   <div class="box text wow slideInLeft" >
+  	 	  	   	   <h2 style="color: rgb(174, 253, 137);">Classes Schedule</h2>
+  	 	  	   	   <p>
+  	 	  	   	   <img src="images/schedule1.png" alt="schedule" />
+  	 	  	   </div>
+  	 	  	   <div class="box timing wow slideInRight">
+                   <table class="table" border="3px">
+                   	 <tbody >
+                   	 	<tr>
+                   	 		<td class="day">Monday</td>
+                   	 	
+                   	 		<td bgcolor="white">Body Building <br> 7:00 to 10:30 AM</td>
+                   	 		
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Tuesday</td>
+                   	 	
+                   	 		<td bgcolor="white">Body Building <br> 6:00 to 10:00 AM</td>
+                   	 		
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Wednesday</td>
+                   	 
+                   	 		<td bgcolor="white">Body Building <br> 6:00 to 10:00 AM</td>
+                   	 		
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Thursday</td>
+                   	 	
+                   	 		<td bgcolor="white">Body Building <br> 6:00 to 10:00 AM</td>
+                   	 		
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Friday</td>
+                   	 
+                   	 		<td bgcolor="white">Body Building <br> 6:00 to 10:00 AM</td>
+                   	 		
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Saturday</td>
+                   	 
+                   	 		<td bgcolor="white">Body Building <br> 7:00 to 10:30 AM</td>
+                   	 		
+							</tr>
+							<tr>
+                   	 		<td class="day">Sunday</td>
+                   	 
+                   	 		<td bgcolor="white">Enjoy At <br> Home</td>
+                   	 		
+                   	 	</tr>
+						<tr>
+                   	 		<td class="day"></td>
+                   	 	
+                   	 		<td bgcolor="white"> <br/> </td>
+                   	 		
+                   	 	</tr>
+						<tr>
+                   	 		<td class="day"></td>
+                   	 	
+                   	 		<td bgcolor="white"> <br/> </td>
+                   	 		
+                   	 	</tr>
+						<tr>
+                   	 		<td class="day">back to home</td>
+                   	 	
+                   	 		<td bgcolor="white"><a href="HOME.html"> HOME</a> <br/> </td>
+                   	 		
+                   	 	</tr>
+						<tr>
+                   	 		<td class="day">have a look at packages</td>
+                   	 	
+                   	 		<td bgcolor="white"><a href="price.html"> PACKAGES</a> <br/> </td>
+                   	 		
+                   	 	</tr>
+						
+                   	 </tbody>
+					 
+					 
+                   </table>
+  	 	  	   </div>
+			   
+  		 </div>
+  	 	  </div>
+  	 </div>
+	 
+	 
+  </section>
+  
+  </body>
+<!-- jquery -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+      $(".ham-burger, .nav ul li a").click(function(){
+       
+        $(".nav").toggleClass("open")
+
+        $(".ham-burger").toggleClass("active");
+      })      
+      $(".accordian-container").click(function(){
+      	$(".accordian-container").children(".body").slideUp();
+      	$(".accordian-container").removeClass("active")
+      	$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+      	$(this).children(".body").slideDown();
+      	$(this).addClass("active")
+      	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+      })
+
+       $(".nav ul li a, .go-down").click(function(event){
+         if(this.hash !== ""){
+
+              event.preventDefault();
+
+              var hash=this.hash; 
+
+              $('html,body').animate({
+                scrollTop:$(hash).offset().top
+              },800 , function(){
+                 window.location.hash=hash;
+              });
+
+              // add active class in navigation
+              $(".nav ul li a").removeClass("active")
+              $(this).addClass("active")
+         }
+      })
+})
+
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       0,
+      }
+    );
+    wow.init();
+  </script>
+</body>
+</html>
+
+
+

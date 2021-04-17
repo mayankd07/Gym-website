@@ -1,0 +1,164 @@
+<html>
+<head>
+	<title>FiTnEsS GyM packages</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    
+  </style>
+<!-- Start Header  -->
+ <header>
+ 	 <div class="container">
+ 	 	<div class="logo">
+ 	 		 <a href="">FITNESS <span> GYM </span></a>
+ 	 	</div>
+ 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	       <span></span>	
+ 	       <span></span>
+ 	 	</a>
+ 	 	<div class="nav">
+ 	 		<ul>
+ 	 			<li><a href="HOME.html">Home</a></li>
+ 	 			<li><a href="Packages.html">About</a></li>
+                                <li><a href="Gallery.html">Gallery</a></li>
+ 	 			<li><a href="Services.html">Services</a></li>
+ 	 			<li><a href="Classes.html">Classes</a></li>
+ 	 			<li><a href="Schedule.html">Schedule</a></li>
+ 	 			<li><a href="Packages.html">Packages</a></li>
+ 	 			<li><a href="HOME.html">Contact</a></li>
+ 	 		</ul>
+ 	 	</div>
+ 	 </div>
+ </header>
+ <!-- End Header  -->
+
+
+  
+</head>
+<body>
+<section class="price-package" id="packages">
+  	 <div class="container">
+  	 	  <h2>Choose Your Package</h2>
+  	
+  	 	  <div class="content">
+  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.2s">
+  	 	  	  	  <div class="inner">
+  	 	  	  	  	   <div class="price-tag">
+  	 	  	  	  	   	  Rs 600/Month
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="img">
+  	 	  	  	  	   	 <img src="images/P1.jpg" alt="price" />
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="text">
+  	 	  	  	  	   	  <h3>Body Building Training</h3>
+  	 	  	  	  	  
+  	 	  	  	  	   	  <p>Monthly</p>
+  	 	  	  	  	   	  <p>45 Minutes</p>
+  	 	  	  	  	   	  <p>Gym and Cardio</p>
+  	 	  	  	  	   	 
+  	 	  	  	  	   	  <a href="HOME.html" class="btn">Join Now</a>
+  	 	  	  	  	   </div>
+  	 	  	  	  </div>
+  	 	  	  </div>
+  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.2s">
+  	 	  	  	  <div class="inner">
+  	 	  	  	  	   <div class="price-tag">
+  	 	  	  	  	   	  Rs 900/Month
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="img">
+  	 	  	  	  	   	 <img src="images/P2.jpg" alt="price" />
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="text">
+  	 	  	  	  	   	  <h3>Body Building Training</h3>
+  	 	  	  	  	  
+  	 	  	  	  	   	  <p>Monthly</p>
+  	 	  	  	  	   	  <p>90 Minutes</p>
+  	 	  	  	  	   	  <p>Gym and Cardio</p>
+  	 	  	  	  	   	  <p>Service Locker Rooms</p>
+  	 	  	  	  	   	  <a href="HOME.html" class="btn">Join Now</a>
+  	 	  	  	  	   </div>
+  	 	  	  	  </div>
+  	 	  	  </div>
+  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.4s">
+  	 	  	  	  <div class="inner">
+  	 	  	  	  	   <div class="price-tag">
+  	 	  	  	  	   	  Rs 1200/Month
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="img">
+  	 	  	  	  	   	 <img src="images/P3.jpg" alt="price" />
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="text">
+  	 	  	  	  	   	  <h3>Body Building Training</h3>
+  	 	  	  	  	   	  <p>Get Free WiFi</p>
+  	 	  	  	  	   	  <p>Monthly</p>
+  	 	  	  	  	   	  <p>No Time Restrictions</p>
+  	 	  	  	  	   	  <p>Gym and Cardio</p>
+  	 	  	  	  	   	  <p>Service Locker Rooms</p>
+  	 	  	  	  	   	  <a href="HOME.html" class="btn">Join Now</a>
+  	 	  	  	  	   </div>
+  	 	  	  	  </div>
+  	 	  	  </div>
+  	 	  </div>
+  	 </div>
+  </section>
+ </body>
+<!-- jquery -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+      $(".ham-burger, .nav ul li a").click(function(){
+       
+        $(".nav").toggleClass("open")
+
+        $(".ham-burger").toggleClass("active");
+      })      
+      $(".accordian-container").click(function(){
+      	$(".accordian-container").children(".body").slideUp();
+      	$(".accordian-container").removeClass("active")
+      	$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+      	$(this).children(".body").slideDown();
+      	$(this).addClass("active")
+      	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+      })
+
+       $(".nav ul li a, .go-down").click(function(event){
+         if(this.hash !== ""){
+
+              event.preventDefault();
+
+              var hash=this.hash; 
+
+              $('html,body').animate({
+                scrollTop:$(hash).offset().top
+              },800 , function(){
+                 window.location.hash=hash;
+              });
+
+              // add active class in navigation
+              $(".nav ul li a").removeClass("active")
+              $(this).addClass("active")
+         }
+      })
+})
+
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       0,
+      }
+    );
+    wow.init();
+  </script>
+</body>
+</html>
+
+
+
+
+
